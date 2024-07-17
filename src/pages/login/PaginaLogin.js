@@ -9,14 +9,14 @@ const PaginaLogin = () => {
     const [active, setActive] = useState(false);
     const [personaType, setPersonaType] = useState(null);
     //Funcionalidad para el botón LogIn (no está en uso)
-    /*
+
     const history = useHistory(); // Initialize useHistory instead of useNavigate
 
     const handleLogin = (e) => {
         e.preventDefault(); // Previene el comportamiento por defecto del formulario
         history.push('/'); // Cambia 'PaginaPrincipal' por '/'
     };
-    */
+
 
     return (
         <div className={`${styles.container} ${active ? styles.active : ''}`}>
