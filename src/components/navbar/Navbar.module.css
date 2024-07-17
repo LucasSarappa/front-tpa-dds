@@ -1,0 +1,58 @@
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+.boton-navbar-estilo-comun, .boton-login-estilo {
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 10px;
+}
+
+.boton-navbar-estilo-comun:active, .boton-login-estilo:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+}
+
+.inicio-btn { left: 200px; }
+.nosotros-btn { left: 240px; }
+.faqs-btn { left: 280px; }
+.noticias-btn { left: 320px; }
+.mapa-btn { left: 360px; }
+
+.boton-login-estilo {
+    width: 220px;
+    height: 60px;
+    background-color: #ffffff;
+    font-size: 21px;
+    text-transform: uppercase;
+    color: #002b59;
+
+}
+
+.login-btn {
+    left: 640px;
+    top: 20px;
+    width: 180px;
+    height: 50px;
+    background-color: white;
+    align-content: center;
+}
+
+.contenido-login-btn {
+    margin-left: 40px; /* Ajusta este valor según necesites */
+}

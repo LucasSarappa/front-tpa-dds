@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+.bottom-right {
+    bottom: 30px;
+    right: -30px;
+    transform: rotate(150deg);
+}
+
+.circle.top-left {
+    top: 60px;
+    left: 100px;
+}
+
+
+.circle.bottom-right {
+    bottom: 60px;
+    right: 100px;
+}
+
+/*button*/
+.boton-estilo-comun {
+    width: 220px;
+    height: 60px;
+    background-color: #ffffff; /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 21px; /* Tamaño del texto */
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase; /* Texto en mayúsculas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #002b59;
+
+}
+
+.boton-estilo-comun:active {
+    transform: scale(0.95); /* Reduce el tamaño del botón al 95% */
+    transition: transform 0.1s ease; /* Suaviza la transición */
+}
+
+
+.colaborar-btn {
+    position: absolute;
+    top: 50%; /* Ajustado para centrar verticalmente */
+    left: 20%; /* Ajustado para posicionar desde la izquierda */
+}
+
+.solicitar-btn {
+    position: absolute;
+    top: 50%; /* Ajustado para centrar verticalmente */
+    left: 35%; /* Ajustado para posicionar desde la izquierda */
+}
+
+
+
+
+
+
+
+

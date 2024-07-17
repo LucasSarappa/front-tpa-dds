@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tahoma", sans-serif;
+}
+
+body {
+    background: #222;
+    font-size: 16px;
+}
+
+.section {
+    padding: 80px 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1270px;
+    padding: 0 15px;
+    margin: auto;
+}
+
+.section-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.section-card {
+    background: grey;
+    padding: 70px 90px 90px;
+    position: relative;
+    border-radius: 50px;
+    z-index: 1;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-card:nth-child(1) {
+    --color: #61f28d;
+    background-image: url('iconoDonacionDinero.png'); /* Cambia a la ruta de la imagen correspondiente */
+
+}
+
+.section-card:nth-child(2) {
+    --color: #eda86b;
+    background-image: url('iconoDonacionPonerHeladera.png'); /* Cambia a la ruta de la imagen correspondiente */
+}
+
+.section-card:nth-child(3) {
+    --color: #60a9d6;
+    background-image: url('iconoDonacionVianda.png'); /* Cambia a la ruta de la imagen correspondiente */
+}
+
+.section-card:nth-child(4) {
+    --color: #6b71ed;
+    background-image: url('iconoDonacionDistribucion.png'); /* Cambia a la ruta de la imagen correspondiente */
+}
+
+.section-card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color);
+    border-radius: 20px;
+    z-index: -1;
+    clip-path: circle(40px at 70px 70px);
+    transition: clip-path 1s ease;
+}
+
+.section-card:hover::before {
+    clip-path: circle(100%);
+    overflow: hidden;
+}
+
+.section-card span {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    height: 80px;
+    width: 80px;
+    font-weight: bold;
+    transform: translate(30px, 30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    transition: transform 1s ease;
+}
+
+.section-card:hover span {
+    transform: translate(0, 30px);
+}
+
+.section-card h2 {
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.section-card p {
+    color: white;
+    line-height: 1.6;
+}
+
+.section-card a {
+    display: inline-block;
+    text-transform: capitalize;
+    color: white;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.section-card a,
+.section-card h2,
+.section-card p {
+    transition: color 1s ease;
+}
+
+.section-card:hover a,
+.section-card:hover h2,
+.section-card:hover p {
+    color: black;
+}
+
+@media (max-width: 990px) {
+    .section-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575px) {
+    .section-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
