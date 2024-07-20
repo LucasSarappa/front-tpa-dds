@@ -1,48 +1,38 @@
 import React from 'react';
-import styles from './TipoDonacion.module.css'; // Importa el archivo CSS
+import styles from './TipoDonacion.module.css';
 
-const TipoDonacion = () => {
+const TipoDonacion = ({ userType }) => {
+    // Determina si el usuario es de tipo humana o juridica
+    const isHumana = userType === 'humana';
+    const isJuridica = userType === 'juridica';
+
     return (
         <div className={styles.section}>
             <div className={styles.container}>
                 <div className={styles["section-cards"]}>
+                    {/* Donar dinero - Disponible para todos */}
                     <div className={styles["section-card"]}>
                         <span>1</span>
-                        <br></br>
-                        <br></br>
-                        <h2> Donar dinero</h2>
-                        <br></br>
-                        <br></br>
-                        <p>Realiza una contribución monetaria para las personas que mas lo necesitan.</p>
+                        <h2>Donar dinero</h2>
+                        <p>Realiza una contribución monetaria para las personas que más lo necesitan.</p>
                     </div>
-                    <div className={styles["section-card"]}>
+                    {/* Hacerse cargo de una heladera - Solo disponible para juridica */}
+                    <div className={`${styles["section-card"]} ${isHumana ? styles.disabled : ''}`}>
                         <span>2</span>
-                        <br></br>
-                        <br></br>
-                        <h2>Hacerse cargo de una Heldera</h2>
-                        <br></br>
-                        <br></br>
-                        <p> Comprométete a mantener una heladera comunitaria abastecida con alimentos</p>
+                        <h2>Hacerse cargo de una heladera</h2>
+                        <p>Comprométete a mantener una heladera comunitaria abastecida con alimentos.</p>
                     </div>
-                    <div className={styles["section-card"]}>
+                    {/* Donar vianda - Disponible para humana */}
+                    <div className={`${styles["section-card"]} ${isJuridica ? styles.disabled : ''}`}>
                         <span>3</span>
-                        <br></br>
-                        <br></br>
                         <h2>Donar vianda</h2>
-                        <br></br>
-                        <br></br>
-                        <p>Puedes donar alimentos preparados que serán distribuidos a personas en situación de
-                            vulnerabilidad</p>
+                        <p>Puedes donar alimentos preparados que serán distribuidos a personas en situación de vulnerabilidad.</p>
                     </div>
-                    <div className={styles["section-card"]}>
+                    {/* Distribuir vianda - Disponible para humana */}
+                    <div className={`${styles["section-card"]} ${isJuridica ? styles.disabled : ''}`}>
                         <span>4</span>
-                        <br></br>
-                        <br></br>
                         <h2>Distribuir vianda</h2>
-                        <br></br>
-                        <br></br>
-                        <p>Únete a nuestro equipo de voluntarios para ayudar en la entrega de viandas a diversas
-                            comunidades</p>
+                        <p>Únete a nuestro equipo de voluntarios para ayudar en la entrega de viandas a diversas comunidades.</p>
                     </div>
                 </div>
             </div>

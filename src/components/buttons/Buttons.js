@@ -1,30 +1,40 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import styles from './Buttons.module.css';
-import logoSolicitar from './logoSolicitar.png';
-import logoColaborar from './logoColaborar.png';
-import PaginaDonacion from "../../pages/donacion/PaginaDonacion.js";
+import logoSolicitar from '../utils/logoSolicitar.png';
+import logoColaborar from '../utils/logoColaborar.png';
 
-const Buttons = () => {
+const Buttons = ({ isLoggedIn, userType }) => {
     const history = useHistory();
+
+    const isJuridicaOrHumana = userType === 'juridica' || userType === 'humana';
+    const isVulnerable = userType === 'vulnerable';
 
     const handleColaborarClick = () => {
         history.push('/PaginaDonacion'); // Navega hacia PaginaDonacion.js
     };
 
+    const handleSolicitarClick = () => {
+        // Implementa la lógica de navegación para el botón Solicitar
+    };
+
     return (
         <div className={styles.container}>
-            <div className={`${styles['blur-rectangle']} ${styles['bottom-right']}`}></div>
-
-            <button className={`${styles['colaborar-btn']} ${styles['boton-estilo-comun']}`} onClick={handleColaborarClick}>
-                <span></span><p>COLABORAR</p>
-                <img src={logoColaborar} alt="Logo Colaborar" style={{ marginLeft: '10px', height: '24px' }} />
+            <button
+                className={`${styles['colaborar-btn']} ${styles['boton-estilo-comun']}`}
+                onClick={handleColaborarClick}
+                disabled={!isLoggedIn || isVulnerable}
+            >
+                <img src={logoColaborar} alt="Logo Colaborar" style={{ marginRight: '10px', height: '24px' }} />
+                Colaborar
             </button>
-            <button className={`${styles['solicitar-btn']} ${styles['boton-estilo-comun']}`}>
-                <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <p>SOLICITAR</p>
-                    <img src={logoSolicitar} alt="Logo Solicitar" style={{ marginLeft: '10px', height: '24px' }} />
-                </div>
+            <button
+                className={`${styles['solicitar-btn']} ${styles['boton-estilo-comun']}`}
+                onClick={handleSolicitarClick}
+                disabled={!isLoggedIn || isJuridicaOrHumana}
+            >
+                <img src={logoSolicitar} alt="Logo Solicitar" style={{ marginRight: '10px', height: '24px' }} />
+                Solicitar
             </button>
         </div>
     );

@@ -31,7 +31,7 @@ body {
 }
 
 .section-card {
-    background: grey;
+    background: darkgray;
     padding: 70px 90px 90px;
     position: relative;
     border-radius: 50px;
@@ -43,23 +43,23 @@ body {
 
 .section-card:nth-child(1) {
     --color: #61f28d;
-    background-image: url('iconoDonacionDinero.png'); /* Cambia a la ruta de la imagen correspondiente */
+    background-image: url('../utils/iconoDonacionDinero.png'); /* Cambia a la ruta de la imagen correspondiente */
 
 }
 
 .section-card:nth-child(2) {
     --color: #eda86b;
-    background-image: url('iconoDonacionPonerHeladera.png'); /* Cambia a la ruta de la imagen correspondiente */
+    background-image: url('../utils/iconoDonacionPonerHeladera.png'); /* Cambia a la ruta de la imagen correspondiente */
 }
 
 .section-card:nth-child(3) {
     --color: #60a9d6;
-    background-image: url('iconoDonacionVianda.png'); /* Cambia a la ruta de la imagen correspondiente */
+    background-image: url('../utils/iconoDonacionVianda.png'); /* Cambia a la ruta de la imagen correspondiente */
 }
 
 .section-card:nth-child(4) {
     --color: #6b71ed;
-    background-image: url('iconoDonacionDistribucion.png'); /* Cambia a la ruta de la imagen correspondiente */
+    background-image: url('../utils/iconoDonacionDistribucion.png'); /* Cambia a la ruta de la imagen correspondiente */
 }
 
 .section-card:before {
@@ -144,4 +144,9 @@ body {
     .section-cards {
         grid-template-columns: repeat(1, 1fr);
     }
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
 }

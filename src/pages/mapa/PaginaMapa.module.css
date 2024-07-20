@@ -1,0 +1,85 @@
+/* PaginaMapa.module.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#navbar ul li:last-child {
+    margin-right: 0;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#welcome-section {
+    height: 100vh; /* 100% of the viewport height */
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 100px 0;
+}
+
+#projects {
+    padding: 50px 0;
+}
+
+.project-tile {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#profile-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: blue;
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        padding: 10px;
+    }
+
+    #navbar ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #navbar ul li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+#map {
+    height: 500px;
+    width: 50%;
+    left: 250px;
+    top: 50px;
+}

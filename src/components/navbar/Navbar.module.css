@@ -56,3 +56,13 @@
 .contenido-login-btn {
     margin-left: 40px; /* Ajusta este valor según necesites */
 }
+
+
+.userTypeText {
+    font-size: 20px;
+    color: #666;
+    display: block; /* Esto asegura que el texto se muestre debajo del botón si es necesario */
+    text-align: center; /* Centra el texto debajo del botón */
+    left: 150px;
+
+}

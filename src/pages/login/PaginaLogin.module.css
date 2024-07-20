@@ -22,10 +22,10 @@ body{
 .container{
     position: relative;
     width: 460px;
-    height: 640px;
+    height: auto;
     border-radius: 12px;
     padding: 20px 30px 120px;
-    background: #303f9f;
+    background: #002b59;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
@@ -92,8 +92,8 @@ body{
 form input{
     outline: none;
     border: none;
-    padding: 10px 15px;
-    font-size: 16px;
+    padding: 8px 10px;
+    font-size: 15px;
     color: #333;
     font-weight: 400;
     border-radius: 8px;
@@ -123,7 +123,7 @@ form .btn{
 }
 
 .loginSection .btn{
-    background: #303f9f;
+    background: #002b59;
     color: #fff;
     border: none;
 }
@@ -176,17 +176,22 @@ form .btn{
     background-color: white; /* Color de fondo */
     border: none; /* Sin borde */
     border-radius: 10px; /* Bordes redondeados */
-    font-size: 15px; /* Tamaño del texto */
+    font-size: 14px; /* Tamaño del texto */
     justify-content: center;
     align-items: center;
     color: #002b59;
-    padding: 10px 20px; /* Añadir algo de relleno */
+    padding: 10px 60px; /* Añadir algo de relleno */
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
-    margin-left: 22px; /* Asegura la alineación y el espaciado */
+    margin-left: 8px; /* Asegura la alineación y el espaciado */
     border: 1px solid #000;
-    margin-top: 20px
+    margin-top: 20px;
+    width: 100px; /* Establece un ancho fijo */
+    height: 100px; /* Establece una altura fija */
+    justify-content: center;
 
+    /* para centrar el texto de dentro del botón */
+    display: flex;
 }
 
 
@@ -198,3 +203,32 @@ form .btn{
     transition: transform 0.1s ease; /* Suaviza la transición */
     transform: scale(0.95); /* Reduce el tamaño del botón al 95% */
 }
+
+
+.contacto-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Ajusta el espacio entre el checkbox y el campo de entrada */
+    color: white;
+}
+
+.selectDNI {
+    outline: none;
+    border: none;
+    padding: 8px 10px;
+    font-size: 15px;
+    color: #333;
+    font-weight: 400;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer; /* Añade un cursor pointer para mejorar la interacción */
+}
+
+.plusButton {
+    background-color: transparent;
+    border: none;
+    color: #fff; /* Ajusta el color según tu diseño */
+    font-size: 24px; /* Ajusta el tamaño según tu diseño */
+    cursor: pointer;
+}
+
