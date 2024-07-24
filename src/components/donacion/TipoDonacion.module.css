@@ -150,3 +150,18 @@ body {
     opacity: 0.5;
     pointer-events: none;
 }
+
+.center-cards {
+    justify-content: center;
+
+}
+
+/* Para 2 tarjetas - persona juridica */
+.grid-2-columns {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Para 3 tarjetas - persona humana */
+.grid-3-columns {
+    grid-template-columns: repeat(3, 1fr);
+}

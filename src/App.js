@@ -7,6 +7,11 @@ import PaginaDonacion from './pages/donacion/PaginaDonacion';
 import PaginaMapa from './pages/mapa/PaginaMapa';
 import 'leaflet/dist/leaflet.css';
 import { AuthProvider } from './context/AuthContext';
+import PaginaCargarColaboraciones from "./pages/cargar-colaboraciones/PaginaCargarColaboraciones";
+import PaginaCanjearPuntos from "./pages/canjear-puntos/PaginaCanjearPuntos";
+import PaginaConsultarPuntos from "./pages/consultar-puntos/PaginaConsultarPuntos";
+import PaginaReportarFallas from "./pages/reportar-fallas/PaginaReportarFallas";
+import HacerseCargoDeUnaHeladera from "./pages/donacion/tipos-de-donaciones/HacerseCargoDeUnaHeladera";
 
 // Importa otros componentes de página según sea necesario
 
@@ -21,7 +26,11 @@ function App() {
                     <Route path="/login" component={PaginaLogin}/> {/* Asegúrate de que esta línea esté presente */}
                     <Route path="/PaginaDonacion" component={PaginaDonacion} />
                     <Route path="/PaginaMapa" component={PaginaMapa} />
-
+                    <Route path="/PaginaCargarColaboraciones" component={PaginaCargarColaboraciones} />
+                    <Route path="/PaginaConsultarPuntos" component={PaginaConsultarPuntos} />
+                    <Route path="/PaginaCanjearPuntos" component={PaginaCanjearPuntos} />
+                    <Route path="/PaginaReportarFallas" component={PaginaReportarFallas} />
+                    <Route path="/HacerseCargoDeUnaHeladera" component={HacerseCargoDeUnaHeladera} />
 
                 </Switch>
             </Router>

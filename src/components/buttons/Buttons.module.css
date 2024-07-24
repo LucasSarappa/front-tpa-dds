@@ -54,6 +54,11 @@
     left: 35%; /* Ajustado para posicionar desde la izquierda */
 }
 
+.disabledBtn {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
 
 
 

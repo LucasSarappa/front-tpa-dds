@@ -64,13 +64,13 @@ const PaginaLogin = () => {
     const handleLogin = (e) => {
         e.preventDefault();
         // Usa los estados directamente en lugar de document.querySelector
-        if (personaType === 'juridica' && cuit === '1' && password === 'juridica') {
+        if (personaType === 'juridica' && cuit === '1' && password === '1') {
             login('juridica');
             history.push('/');
-        } else if (personaType === 'humana' && documento === '1' && password === 'humana') {
+        } else if (personaType === 'humana' && documento === '1' && password === '1') {
             login('humana');
             history.push('/');
-        } else if (personaType === 'vulnerable' && documento === '1' && password === 'vulnerable') {
+        } else if (personaType === 'vulnerable' && documento === '1' && password === '1') {
             login('vulnerable');
             history.push('/');
         }

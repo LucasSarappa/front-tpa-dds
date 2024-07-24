@@ -21,7 +21,7 @@ const Buttons = ({ isLoggedIn, userType }) => {
     return (
         <div className={styles.container}>
             <button
-                className={`${styles['colaborar-btn']} ${styles['boton-estilo-comun']}`}
+                className={`${styles['colaborar-btn']} ${styles['boton-estilo-comun']} ${!isLoggedIn || isVulnerable ? styles.disabledBtn : ''}`}
                 onClick={handleColaborarClick}
                 disabled={!isLoggedIn || isVulnerable}
             >
@@ -29,7 +29,7 @@ const Buttons = ({ isLoggedIn, userType }) => {
                 Colaborar
             </button>
             <button
-                className={`${styles['solicitar-btn']} ${styles['boton-estilo-comun']}`}
+                className={`${styles['solicitar-btn']} ${styles['boton-estilo-comun']} ${!isLoggedIn || isJuridicaOrHumana ? styles.disabledBtn : ''}`}
                 onClick={handleSolicitarClick}
                 disabled={!isLoggedIn || isJuridicaOrHumana}
             >

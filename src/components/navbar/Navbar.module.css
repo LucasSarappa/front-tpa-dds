@@ -28,11 +28,15 @@
     transition: transform 0.1s ease;
 }
 
-.inicio-btn { left: 200px; }
-.nosotros-btn { left: 240px; }
-.faqs-btn { left: 280px; }
-.noticias-btn { left: 320px; }
-.mapa-btn { left: 360px; }
+.inicio-btn { left: 120px; }
+.nosotros-btn { left: 160px; }
+.faqs-btn { left: 200px; }
+.noticias-btn { left: 240px; }
+.mapa-btn { left: 280px; }
+.cargarColaboradores-btn { left: 320px; }
+.puntos-btn { left: 360px; }
+.fallas-btn { left: 400px; }
+
 
 .boton-login-estilo {
     width: 220px;
@@ -45,7 +49,7 @@
 }
 
 .login-btn {
-    left: 640px;
+    left: 560px;
     top: 20px;
     width: 180px;
     height: 50px;
@@ -63,6 +67,40 @@
     color: #666;
     display: block; /* Esto asegura que el texto se muestre debajo del botón si es necesario */
     text-align: center; /* Centra el texto debajo del botón */
-    left: 150px;
+    left: 550px;
 
 }
+
+.puntos-dropdown-container {
+    position: relative;
+    display: inline-block; /* Asegura que el contenedor se ajuste al tamaño del botón */
+}
+
+.puntos-dropdown {
+    position: absolute;
+    top: 30px;
+    left: 360px;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade sombra para mejor visibilidad */
+    border-radius: 5px; /* Bordes redondeados */
+    overflow: hidden; /* Esconde el contenido que se desborda */
+}
+
+.puntos-dropdown button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+    color: #333; /* Color del texto */
+}
+
+.puntos-dropdown button:hover {
+    background-color: #f0f0f0;
+}
+

@@ -1,0 +1,111 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.pg-principal-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #002b59 75%, snow 25%);
+}
+
+.pg-principal-imagen-full-width, .pg-principal-imagen-logo-esquina {
+    position: absolute;
+}
+
+.pg-principal-imagen-full-width {
+    width: 900px;
+    height: 600px;
+    left: 870px;
+    top: 60px;
+}
+
+.pg-principal-imagen-logo-esquina {
+    left: 10px;
+    top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.rectangulo-personalizado {
+    width: 700px;
+    height: 250px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.rectangulo-personalizado::before,
+.rectangulo-personalizado::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background: burlywood;
+}
+
+.rectangulo-personalizado::before {
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-10deg);
+}
+
+.rectangulo-personalizado::after {
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(10deg);
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-card {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.stats-card.active {
+    opacity: 1;
+}
+
+.stats-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #002b59;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.stats-value {
+    color: #002b59;
+    font-size: 60px;
+    font-family: 'Poppins', sans-serif;
+}
