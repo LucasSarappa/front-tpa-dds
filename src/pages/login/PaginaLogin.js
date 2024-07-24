@@ -119,7 +119,7 @@ const PaginaLogin = () => {
 
                         <label className={styles['contacto-container']}>
                             <button onClick={() => toggleContacto('email')} className={styles.plusButton}>+</button>
-                            Teléfono
+                            Email
                             {contactosVisibles.email && (
                                 <input type="text" name="email" placeholder="Email"
                                        value={valoresContacto.email} onChange={handleInputChange}/>
@@ -128,7 +128,7 @@ const PaginaLogin = () => {
 
                         <label className={styles['contacto-container']}>
                             <button onClick={() => toggleContacto('telegram')} className={styles.plusButton}>+</button>
-                            Teléfono
+                            Telegram
                             {contactosVisibles.telegram && (
                                 <input type="text" name="telegram" placeholder="Telegram"
                                        value={valoresContacto.telegram} onChange={handleInputChange}/>
@@ -166,7 +166,7 @@ const PaginaLogin = () => {
 
                         <label className={styles['contacto-container']}>
                             <button onClick={() => toggleContacto('email')} className={styles.plusButton}>+</button>
-                            Teléfono
+                            Email
                             {contactosVisibles.email && (
                                 <input type="text" name="email" placeholder="Email"
                                        value={valoresContacto.email} onChange={handleInputChange}/>
@@ -175,7 +175,7 @@ const PaginaLogin = () => {
 
                         <label className={styles['contacto-container']}>
                             <button onClick={() => toggleContacto('telegram')} className={styles.plusButton}>+</button>
-                            Teléfono
+                            Telegram
                             {contactosVisibles.telegram && (
                                 <input type="text" name="telegram" placeholder="Telegram"
                                        value={valoresContacto.telegram} onChange={handleInputChange}/>
